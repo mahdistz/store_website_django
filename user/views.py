@@ -6,12 +6,12 @@ from .serializers import UserSerializer
 # Create your views here.
 
 
-class UserListView(ListAPIView):
+class UserList(ListAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
 
 
-class UserDetailView(RetrieveUpdateDestroyAPIView):
+class UserDetail(RetrieveUpdateDestroyAPIView):
     queryset = CustomUser.objects.all()
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated, ]

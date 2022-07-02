@@ -2,7 +2,7 @@ from django.contrib.auth.models import BaseUserManager
 from django.utils.translation import ugettext_lazy as _
 
 
-class UserManager(BaseUserManager):
+class CustomerManager(BaseUserManager):
     def _create_user(self, username, password, **extra_fields):
         """
         Create and save a user with the given username and password.
